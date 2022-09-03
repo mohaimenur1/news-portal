@@ -27,6 +27,8 @@ const showCategories = (categories) => {
 categoryFetching();
 
 const categoryClick = async (categoryId) => {
+  toggleSpinner(true);
+
   console.log(categoryId);
   const url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
   const response = await fetch(url);
@@ -40,7 +42,7 @@ const showingDataByCategory = (datas) => {
     .map((data) => {
       return `
     
-    <div class="col-lg-6">
+    <div class="col-lg-6 mb-4">
     <div class="card">
       <div class="card-body">
         <img
@@ -92,6 +94,8 @@ const showingDataByCategory = (datas) => {
         </div>
     `;
 
+  toggleSpinner(false);
+
   const totalShowing = `
     
         <h4 class="text-color text-light">
@@ -99,6 +103,7 @@ const showingDataByCategory = (datas) => {
         </h4>
 
     `;
+
   const totalNewCount = document.getElementById("total-news");
   totalNewCount.innerHTML = totalShowing;
 };
@@ -142,4 +147,14 @@ const showingNews = (singleNews) => {
 
   const modalTitleChange = document.getElementById("modal-titel-id");
   modalTitleChange.innerText = `${singleNews.title}`;
+};
+
+//loader toogle function
+const toggleSpinner = (isLoading) => {
+  const loadingSection = document.getElementById("loader");
+  if (isLoading) {
+    loadingSection.classList.remove("d-none");
+  } else {
+    loadingSection.classList.add("d-none");
+  }
 };

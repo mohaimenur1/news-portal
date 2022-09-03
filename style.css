@@ -74,3 +74,7 @@ font-family: 'Wellfleet', cursive;
   /* border-radius: 15px; */
   color: #20828f !important;
 }
+
+footer {
+  background-color: #a1d2daba;
+}
