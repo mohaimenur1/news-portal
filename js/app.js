@@ -75,7 +75,7 @@ const showingDataByCategory = (datas) => {
               data.author.img
             }" alt="" srcset="" />
             <h5 class="title-first-word">${
-              data.author.name ? data.author.name : "No Author Name Found"
+              data.author.name ? data.author.name : "No Author Name Availabe"
             }</h5>
           </div>
           <div class="views">
