@@ -77,7 +77,11 @@ const showingDataByCategory = (datas) => {
     .join("");
 
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = display;
+  cardContainer.innerHTML = display
+    ? display
+    : `
+        <div class="d-flex justify-content-center">
+        <div class="alert not-found-container w-50 rounded-5 text-center">No News Found!</div>
+        </div>
+    `;
 };
-
-showingDataByCategory();

@@ -45,3 +45,11 @@ font-family: 'Wellfleet', cursive;
   background-color: var(--main-color);
   color: white;
 }
+
+/* not found section */
+
+.not-found-container {
+  background-color: #a1d2daba;
+  color: black;
+  font-weight: bold;
+}
