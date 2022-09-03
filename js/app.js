@@ -38,6 +38,7 @@ const categoryClick = async (categoryId) => {
 
 const showingDataByCategory = (datas) => {
   console.log(datas);
+  datas.sort((a, b) => parseFloat(b.total_view) - parseFloat(a.total_view));
   const display = datas
     .map((data) => {
       return `
