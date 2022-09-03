@@ -2,9 +2,13 @@
 
 const categoryFetching = async () => {
   const url = `https://openapi.programming-hero.com/api/news/categories`;
-  const response = await fetch(url);
-  const data = await response.json();
-  showCategories(data.data.news_category);
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    showCategories(data.data.news_category);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const showCategories = (categories) => {
@@ -31,9 +35,13 @@ const categoryClick = async (categoryId) => {
 
   console.log(categoryId);
   const url = `https://openapi.programming-hero.com/api/news/category/${categoryId}`;
-  const response = await fetch(url);
-  const data = await response.json();
-  showingDataByCategory(data.data);
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    showingDataByCategory(data.data);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const showingDataByCategory = (datas) => {
@@ -112,9 +120,13 @@ const showingDataByCategory = (datas) => {
 //details news
 const detailNews = async (newsId) => {
   const url = `https://openapi.programming-hero.com/api/news/${newsId}`;
-  const response = await fetch(url);
-  const data = await response.json();
-  showingNews(data.data[0]);
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    showingNews(data.data[0]);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const showingNews = (singleNews) => {
