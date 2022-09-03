@@ -9,6 +9,12 @@ font-family: 'Wellfleet', cursive;
 
 @import url("https://fonts.googleapis.com/css2?family=Wellfleet&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 :root {
   --main-color: #20828f;
   --text-light-color: #949494;
