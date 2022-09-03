@@ -66,9 +66,14 @@ const showingDataByCategory = (datas) => {
             <strong>${data.total_view} k</strong>
           </div>
           <div class="details-button">
-            <a class="btn btn-modal back-ground-color text-white"
-              >Details</a
-            >
+            <button
+                type="button"
+                onClick="detailNews('${data._id}')" class="btn btn-modal back-ground-color text-white"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+              More Details
+            </button>
           </div>
         </div>
       </div>
@@ -98,6 +103,12 @@ const showingDataByCategory = (datas) => {
   totalNewCount.innerHTML = totalShowing;
 };
 
-// total news count
+//details news
+const detailNews = async (newsId) => {
+  const url = `https://openapi.programming-hero.com/api/news/${newsId}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  showingNews(data.data[0]);
+};
 
-// const showTotalData = () => {};
+const showingNews = (singleNews) => {};
