@@ -86,8 +86,14 @@ body {
   color: #20828f !important;
 }
 
+/* navbar */
+
 .navbar-bg {
   background-color: #a1d2daba;
+}
+
+.navbar-link:hover {
+  border-bottom: 3px solid var(--main-color);
 }
 
 .footer {
