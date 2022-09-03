@@ -8,6 +8,7 @@ const categoryFetching = async () => {
 };
 
 const showCategories = (categories) => {
+  // console.log(categories);
   const display = categories
     .map((category) => {
       return `
@@ -34,6 +35,7 @@ const categoryClick = async (categoryId) => {
 };
 
 const showingDataByCategory = (datas) => {
+  console.log(datas);
   const display = datas
     .map((data) => {
       return `
@@ -84,4 +86,18 @@ const showingDataByCategory = (datas) => {
         <div class="alert not-found-container w-50 rounded-5 text-center">No News Found!</div>
         </div>
     `;
+
+  const totalShowing = `
+    
+        <h4 class="text-color text-light">
+          ${datas.length} items found for this category
+        </h4>
+
+    `;
+  const totalNewCount = document.getElementById("total-news");
+  totalNewCount.innerHTML = totalShowing;
 };
+
+// total news count
+
+// const showTotalData = () => {};
