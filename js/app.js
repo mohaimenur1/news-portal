@@ -128,4 +128,18 @@ const showingNews = (singleNews) => {
   `;
   const modalDataContainer = document.getElementById("modal-data");
   modalDataContainer.innerHTML = display;
+
+  const modalAuthorDetails = document.getElementById("modal-author-details");
+  modalAuthorDetails.innerHTML = `
+  
+      <div class="author-section d-flex align-items-center">
+        <img class="author-img me-2 mb-2" src="${singleNews.author.img}" alt="" srcset="" />
+        <h5 class="me-2">${singleNews.author.name}</h5>
+        <h1><span class="badge bg-secondary">${singleNews.rating.badge}</span></h1>
+      </div>
+  
+  `;
+
+  const modalTitleChange = document.getElementById("modal-titel-id");
+  modalTitleChange.innerText = `${singleNews.title}`;
 };
