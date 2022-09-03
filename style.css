@@ -11,8 +11,13 @@ font-family: 'Wellfleet', cursive;
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+html {
+  min-height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  min-height: 100%;
 }
 
 :root {
@@ -85,8 +90,9 @@ body {
   background-color: #a1d2daba;
 }
 
-footer {
+.footer {
   background-color: #a1d2daba;
+  margin-top: auto;
 }
 
 .top-blog-text {

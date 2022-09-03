@@ -60,7 +60,9 @@ const showingDataByCategory = (datas) => {
           alt=""
           srcset=""
         />
-        <h5 class="card-title title-first-word">${data.title}</h5>
+        <h5 class="card-title title-first-word">${
+          data.title ? data.title : "No Title Found"
+        }</h5>
         <p class="card-text text-shorten">
           ${data.details}
         </p>
@@ -69,17 +71,25 @@ const showingDataByCategory = (datas) => {
           class="news-own d-flex justify-content-between align-items-center"
         >
           <div class="author-section d-flex align-items-center">
-            <img class="author-img me-2" src="${data.author.img}" alt="" srcset="" />
-            <h5 class="title-first-word">${data.author.name}</h5>
+            <img class="author-img me-2" src="${
+              data.author.img
+            }" alt="" srcset="" />
+            <h5 class="title-first-word">${
+              data.author.name ? data.author.name : "No Author Name Found"
+            }</h5>
           </div>
           <div class="views">
             <i class="fa fa-eye text-color"></i>
-            <strong class="text-color">${data.total_view} k</strong>
+            <strong class="text-color">${
+              data.total_view ? data.total_view : "No Total View Found"
+            } k</strong>
           </div>
           <div class="details-button">
             <button
                 type="button"
-                onClick="detailNews('${data._id}')" class="btn btn-modal back-ground-color text-white"
+                onClick="detailNews('${
+                  data._id
+                }')" class="btn btn-modal back-ground-color text-white"
                 data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop"
               >
@@ -135,12 +145,12 @@ const showingNews = (singleNews) => {
 
         <img
         class="img-fluid w-auto"
-        src="${singleNews.image_url}"
+        src="${singleNews.image_url ? singleNews.image_url : "No Image Found"}"
         alt=""
         srcset=""
       />
         <p class="card-text">
-          ${singleNews.details}
+          ${singleNews.details ? singleNews.details : "No Details Found"}
         </p>
   
   `;
@@ -159,7 +169,9 @@ const showingNews = (singleNews) => {
   `;
 
   const modalTitleChange = document.getElementById("modal-titel-id");
-  modalTitleChange.innerText = `${singleNews.title}`;
+  modalTitleChange.innerText = `${
+    singleNews.title ? singleNews.title : "No Title Found"
+  }`;
 };
 
 //loader toogle function
