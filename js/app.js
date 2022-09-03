@@ -57,16 +57,16 @@ const showingDataByCategory = (datas) => {
         <div
           class="news-own d-flex justify-content-between align-items-center"
         >
-          <div class="author-section">
-            <img src="" alt="" srcset="" />
-            <h5>rahi</h5>
+          <div class="author-section d-flex align-items-center">
+            <img class="author-img me-2" src="${data.author.img}" alt="" srcset="" />
+            <h5>${data.author.name}</h5>
           </div>
           <div class="views">
-            <i>view</i>
-            <strong>1.5M</strong>
+            <i class="fa fa-eye"></i>
+            <strong>${data.total_view} k</strong>
           </div>
           <div class="details-button">
-            <a href="#" class="btn back-ground-color text-white"
+            <a class="btn btn-modal back-ground-color text-white"
               >Details</a
             >
           </div>

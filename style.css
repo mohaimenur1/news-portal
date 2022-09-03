@@ -53,3 +53,17 @@ font-family: 'Wellfleet', cursive;
   color: black;
   font-weight: bold;
 }
+
+/* author image */
+
+.author-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.btn-modal:hover {
+  border: 2px solid var(--main-color);
+  /* border-radius: 15px; */
+  color: #20828f !important;
+}
