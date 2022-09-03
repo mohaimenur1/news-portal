@@ -75,6 +75,14 @@ font-family: 'Wellfleet', cursive;
   color: #20828f !important;
 }
 
+.navbar-bg {
+  background-color: #a1d2daba;
+}
+
 footer {
   background-color: #a1d2daba;
+}
+
+.top-blog-text {
+  font-family: "Faster One", cursive;
 }

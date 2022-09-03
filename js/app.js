@@ -43,7 +43,7 @@ const showingDataByCategory = (datas) => {
       return `
     
     <div class="col-lg-6 mb-4">
-    <div class="card">
+    <div class="card shadow">
       <div class="card-body">
         <img
           class="img-fluid w-auto"
@@ -51,7 +51,7 @@ const showingDataByCategory = (datas) => {
           alt=""
           srcset=""
         />
-        <h5 class="card-title">${data.title}</h5>
+        <h5 class="card-title title-first-word">${data.title}</h5>
         <p class="card-text text-shorten">
           ${data.details}
         </p>
@@ -61,11 +61,11 @@ const showingDataByCategory = (datas) => {
         >
           <div class="author-section d-flex align-items-center">
             <img class="author-img me-2" src="${data.author.img}" alt="" srcset="" />
-            <h5>${data.author.name}</h5>
+            <h5 class="title-first-word">${data.author.name}</h5>
           </div>
           <div class="views">
-            <i class="fa fa-eye"></i>
-            <strong>${data.total_view} k</strong>
+            <i class="fa fa-eye text-color"></i>
+            <strong class="text-color">${data.total_view} k</strong>
           </div>
           <div class="details-button">
             <button
