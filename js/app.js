@@ -50,7 +50,7 @@ const showingDataByCategory = (datas) => {
           srcset=""
         />
         <h5 class="card-title">${data.title}</h5>
-        <p class="card-text">
+        <p class="card-text text-shorten">
           ${data.details}
         </p>
 

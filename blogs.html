@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <i class="fa fa-facebook-square me-2 fa-2x title-first-word"></i>
+        <i class="fa fa-instagram me-2 fa-2x title-first-word"></i>
+        <i class="fa fa-twitter-square me-2 fa-2x title-first-word"></i>
+        <i class="fa fa-youtube-play me-2 fa-2x title-first-word"></i>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link title-first-word fw-bold"
+                aria-current="page"
+                href="index.html"
+                >News</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="fw-bold nav-link title-first-word" href="blogs.html"
+                >Blogs</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="text-center mt-5 mb-4">
+      <h1>Top Blogs For You</h1>
+    </header>
+    <main class="container">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              what is the difference between var let and const?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>VAR</strong> <br />
+              Var declarations are globally scoped or function scoped. That
+              means if a variable is declared with var outside a function then
+              it is in the global scope(accessible anywhere). Otherwise, if they
+              are inside a function we can only access them inside the
+              function.<br />
+              <strong>LET</strong> <br />
+              That is why let and const introduced. Its an enhanced version of
+              var, it solves all the problems that come with the var keyword.
+              Like, let is a block-scoped variable and we cannot re-declared but
+              can be updated(re-assigned). Youll see in the below example as it
+              shows that let is preferable over var. <br />
+              <strong>CONST</strong> <br />
+              Const declarations share some similarities with let declarations,
+              but const variables cannot be updated or re-declared. It maintains
+              the constant values.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              difference between arrow function and regular function?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>Arrow Function</strong> <br />
+              1.Shorter function expression <br />
+              2.No ownthisKeyword bindings<br />
+              3.No argumentsbindings<br />
+              4.No duplicate named parameters<br />
+              Using constructor & new keyword<br />
+              <strong>Regular Function</strong> <br />
+              1.Inside the body of a regular function, arguments is a special
+              array-like object containing the list of arguments with which the
+              function has been invoked.<br />
+              2.The return statement is missing, or there's no expression after
+              return statement, the regular function implicitely returns
+              undefined:<br />
+              3.The regular functions are the usual way to define methods on
+              classes.<br />
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              what is the difference between map , foreach , filter ,find ?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>forEach()</strong> <br />
+              forEach(), is used to execute the same code on every element in an
+              array but does not change the array and it returns undefined.<br />
+              <strong>map()</strong> <br />
+              map() executes the same code on every element in an array and
+              returns a new array with the updated elements.<br />
+              <strong>filter()</strong> <br />
+              filter() checks every element in an array to see if it meets a
+              certain criteria and returns a new array with the elements that
+              return truthy for the criteria.<br />
+              <strong>find()</strong> <br />
+              The find() accepts two arguments: a callback function and an
+              optional value to use for the this inside the callback
+              function.<br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
