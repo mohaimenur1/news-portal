@@ -161,9 +161,17 @@ const showingNews = (singleNews) => {
   modalAuthorDetails.innerHTML = `
   
       <div class="author-section d-flex align-items-center">
-        <img class="author-img me-2 mb-2" src="${singleNews.author.img}" alt="" srcset="" />
-        <h5 class="me-2">${singleNews.author.name}</h5>
-        <h1><span class="badge bg-secondary">${singleNews.rating.badge}</span></h1>
+        <img class="author-img me-2 mb-2" src="${
+          singleNews.author.img
+        }" alt="" srcset="" />
+        <h5 class="me-2">${
+          singleNews.author.name
+            ? singleNews.author.name
+            : "No author name availble"
+        }</h5>
+        <h1><span class="badge bg-secondary">${
+          singleNews.rating.badge
+        }</span></h1>
       </div>
   
   `;
