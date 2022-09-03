@@ -111,4 +111,21 @@ const detailNews = async (newsId) => {
   showingNews(data.data[0]);
 };
 
-const showingNews = (singleNews) => {};
+const showingNews = (singleNews) => {
+  console.log(singleNews);
+  const display = `
+
+        <img
+        class="img-fluid w-auto"
+        src="${singleNews.image_url}"
+        alt=""
+        srcset=""
+      />
+        <p class="card-text">
+          ${singleNews.details}
+        </p>
+  
+  `;
+  const modalDataContainer = document.getElementById("modal-data");
+  modalDataContainer.innerHTML = display;
+};
