@@ -1,0 +1,47 @@
+/* fonts 
+
+font-family: 'Faster One', cursive;
+font-family: 'Wellfleet', cursive;
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Wellfleet&display=swap");
+
+:root {
+  --main-color: #20828f;
+  --text-light-color: #949494;
+}
+
+.text-color {
+  color: var(--text-light-color);
+}
+
+.back-ground-color {
+  background-color: var(--main-color);
+}
+
+.news-title {
+  font-family: "Wellfleet", cursive;
+  /* font-family: "Faster One", cursive; */
+}
+
+.title-first-word {
+  color: var(--main-color);
+}
+
+.border-bottom {
+  border: 1px solid var(--main-color);
+}
+
+.btn-outline-category {
+  border: 2px solid var(--main-color);
+  border-radius: 15px;
+  color: #949494;
+}
+
+.btn-outline-category:hover {
+  background-color: var(--main-color);
+  color: white;
+}
